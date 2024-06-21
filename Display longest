@@ -1,0 +1,23 @@
+class Solution {
+public static String longest(int n, String[] names) {
+int count=0;
+String ans =" ";
+for(int i=0;i<n;i++){
+    
+    String cur = names[i];
+    
+    int length =cur.length();
+    
+    count =Math.max(length,count);              
+}
+
+for (int i=0;i<n;i++){
+     String cur=names[i];
+     if( cur.length()==count){
+        ans=cur;
+        break;
+    }
+}
+return ans;
+}
+}
