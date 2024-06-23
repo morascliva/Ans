@@ -1,19 +1,13 @@
-public class Main {
-     static void pattern5(int n) {
-        for (int row = 0; row < 2 * n; row++) {
-            int totalColsInRow = row > n ? 2 * n - row: row;
-            for (int col = 0; col < totalColsInRow; col++) {
+public class p2 {
+	public static void main(String[] args) {
+        for (int i = 1; i <= 2 * 5; i++) {
+            int totalColsInRow = i > 5 ? 2 * 5 - i: i;
+            for (int j = 1; j <= totalColsInRow; j++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
-    }
-    
-
-    public static void main(String[] args) {
-        int n = 5; 
-        pattern5(n);
-    }
+}
 }
 
 * 
