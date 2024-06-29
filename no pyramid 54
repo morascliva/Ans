@@ -29,3 +29,36 @@ public class Pattern3 {
       3 4 5 4 3 
    2 3 4 5 4 3 2 
 1 2 3 4 5 4 3 2 1 
+
+
+Detailed Explanation
+First Row (i = 5):
+
+Prints 4 spaces: " "
+Prints increasing part: "5 "
+There is no decreasing part because n - 1 < i.
+Result: " 5"
+Second Row (i = 4):
+
+Prints 3 spaces: " "
+Prints increasing part: "4 5 "
+Prints decreasing part: "4 "
+Result: " 4 5 4"
+Third Row (i = 3):
+
+Prints 2 spaces: " "
+Prints increasing part: "3 4 5 "
+Prints decreasing part: "4 3 "
+Result: " 3 4 5 4 3"
+Fourth Row (i = 2):
+
+Prints 1 space: " "
+Prints increasing part: "2 3 4 5 "
+Prints decreasing part: "4 3 2 "
+Result: " 2 3 4 5 4 3 2"
+Fifth Row (i = 1):
+
+Prints no spaces
+Prints increasing part: "1 2 3 4 5 "
+Prints decreasing part: "4 3 2 1 "
+Result: "1 2 3 4 5 4 3 2 1"
