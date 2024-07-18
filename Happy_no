@@ -1,0 +1,29 @@
+
+
+    
+    public static int Checkhappy(int num) {
+        int sum = 0;
+        while (num != 0) {
+            int rem = num % 10;
+            sum += rem * rem;
+            num = num / 10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int num = 45;
+        int res = Checkhappy(num);
+
+        // Iterate until res becomes 1 or 4
+        while (res != 1 && res != 4) {
+            res = Checkhappy(res);
+        }
+
+        if (res == 1) {
+            System.out.println(num + " is a happy number");
+        } else {
+            System.out.println(num + " is not a happy number");
+        }
+    }
+
