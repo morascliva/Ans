@@ -23,6 +23,7 @@ public class Pattern5 {
             System.out.println();
         }
 
+
         // Print the lower half of the pattern
         for (int i = 2; i <= n; i++) {
             // Print leading spaces
