@@ -1,0 +1,19 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int num = 13;
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.println(i);
+                count++;
+            }
+        }
+        
+        // A prime number has exactly two divisors: 1 and itself.
+        if (count == 2) {
+            System.out.print("Number is prime");
+        } else {
+            System.out.print("Number is not prime");
+        }
+    }
+}
