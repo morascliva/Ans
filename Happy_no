@@ -1,6 +1,3 @@
-
-
-    
     public static int Checkhappy(int num) {
         int sum = 0;
         while (num != 0) {
