@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+class ClockwiseRotation {
+    public static void rotateArrayClockwise(int[] arr) {
+        int n = arr.length;
+        int temp = arr[n - 1]; // Store the last element in a temporary variable
+        for (int i = n - 1; i > 0; i--) {
+            arr[i] = arr[i - 1]; // Shift elements to the right
+        }
+        arr[0] = temp; // Place the original last element at the start
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8, 10, 12}; // Initialize the array
+        int rotations = 300 % arr.length; // Calculate the effective number of rotations
+        for (int i = 0; i < rotations; i++) {
+            rotateArrayClockwise(arr); // Perform the rotation
+        }
+        System.out.print(Arrays.toString(arr)); // Print the final state of the array
+    }
+}
