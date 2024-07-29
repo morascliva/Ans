@@ -1,0 +1,21 @@
+class HelloWorld {
+    public static void perfectno(int num) {
+        int sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+      
+        if (num == sum) {
+            System.out.print("It's perfect");
+        } else {
+            System.out.print("It's not perfect");
+        }
+    }
+
+    public static void main(String[] args) {
+        int num = 6; // You can change this number to test other values
+        perfectno(num);
+    }
+}
