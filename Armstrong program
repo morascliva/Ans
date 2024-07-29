@@ -1,0 +1,36 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static int Count(int num){
+        int count =0;
+        while(num!=0){
+            num=num/10;
+            count++;
+        }
+        return count;
+    }
+    
+    public static int CheckArm(int num){
+        int digit=Count(num);
+        int res=0;
+        while(num!=0){
+            int rem=num%10;
+            res=(int)Math.pow(rem,digit)+res;
+            num=num/10;
+        }
+        return res;
+    }
+    
+    public static void main(String [] args ){
+        int num=371;
+        int res=CheckArm(num);
+        if(num==res){
+            System.out.println("Its Armstrong");
+        }
+        else
+        {
+            System.out.println("Its not Armstrong");
+        }
+    }
+}
