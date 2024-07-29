@@ -1,0 +1,18 @@
+
+class Maxofarray {
+    public static int maxx(int [] arr){
+        int max=0;
+        for(int val:arr){
+            if(val>max){
+                max=val;
+            }
+        }
+        return max;
+        
+    }
+    public static void main(String []args){
+        int [] arr={23,45,56,78,50,12};
+        int max =maxx(arr);
+        System.out.println(max);
+    }
+}
