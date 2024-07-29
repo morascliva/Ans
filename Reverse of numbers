@@ -1,0 +1,22 @@
+class HelloWorld {
+    public static int reverse(int num) {
+        num=145;
+        int rev = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            rev = (rev * 10) + digit;
+            num = num / 10;
+        }
+        return rev;
+    }
+
+    public static void main(String[] args) {
+        for (int k = 1; k < 1000; k++) {
+            int num = k;
+            int rev = reverse(num);
+            if (num == rev) {
+                System.out.println(rev);
+            }
+        }
+    }
+}
