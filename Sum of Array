@@ -1,0 +1,16 @@
+
+class Sumofarray {
+    public static int add_ele(int [] arr){
+        int sum=0;
+        for(int val:arr){
+            sum=val+sum;
+        }
+        return sum;
+        
+    }
+    public static void main(String []args){
+        int [] arr={23,45,56,78,50,12};
+        int sum =add_ele(arr);
+        System.out.println(sum);
+    }
+}
