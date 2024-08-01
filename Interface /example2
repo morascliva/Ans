@@ -1,0 +1,39 @@
+public interface Switch{
+void son();
+void soff();
+}
+
+interface Regulator{
+void increseSpeed();
+void decreseSpeed();
+}
+
+interface SRcombo extends switch ,Regulator{
+}
+
+public class Fan implements SRcombo{
+@override
+void son(){
+System.out.println("Switch ON");
+}
+
+void soff(){
+System.out.println("Switch OFF");
+}
+
+public void increse Speed(){
+System.out.print("Speed Increase");
+}
+public void decreaseSpeed(){
+System.out.print("Speed Decresed ");
+}
+}
+public class TestFan{
+public static void main(String [] args){
+SRcombo c= new Fan();
+c.Son();
+c.increseSpeed();
+c.decreaseSpeed();
+c.Son();
+c.Soff();
+}}
