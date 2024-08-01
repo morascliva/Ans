@@ -1,0 +1,22 @@
+interface switch{
+  abstarct void son();
+  abstarct void soff();
+}
+
+class ligth implements switch{
+@Override
+void son(){
+System.out.println("Switch ON");
+}
+
+@Override
+void soff(){
+System.out.println("Switch OFF");
+}
+class Test {
+public static void main(String [] args){
+Ligth l=new Light();
+l.son();
+l.soff();
+}
+}
