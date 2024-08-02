@@ -1,3 +1,4 @@
+
 class Maxofarray {
     public static int maxsecond(int[] arr) {
         if (arr.length < 2) {
