@@ -1,0 +1,9 @@
+public class Test {
+    public static void main(String[] args) {
+        MusicPlayer m = new MusicPlayer();
+        m.pressEnter();
+        
+        NotePad n = new NotePad();
+        n.pressEnter();
+    }
+}
