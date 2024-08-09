@@ -1,0 +1,5 @@
+public class NotePad extends Keyword {
+    void pressEnter() {
+        System.out.println("Goes to next line");
+    }
+}
