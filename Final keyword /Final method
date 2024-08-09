@@ -1,0 +1,22 @@
+class VTU{
+    final public void fee(){
+        System.out.println("fee= 50k");
+    }
+}
+
+// class RVCE extends VTU{
+//     public void fee(){
+//         System.out.println("fee=20k");
+//     }
+// }
+
+public class Demo{
+    public static void main(String [] args){
+        VTU v = new VTU();
+        v.fee();
+    }
+}
+
+
+
+fee= 50k
