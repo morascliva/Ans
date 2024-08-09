@@ -1,0 +1,5 @@
+public class MusicPlayer extends Keyword {
+    void pressEnter() {
+        System.out.println("Play/pause music");
+    }
+}
