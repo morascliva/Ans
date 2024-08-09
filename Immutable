@@ -1,0 +1,31 @@
+public class ImmutableDemo {
+    private final int i;
+
+    // Constructor to initialize the immutable field
+    public ImmutableDemo(int i) {
+        this.i = i;
+    }
+
+    // Method to modify the value, returning a new instance if the value is different
+    ImmutableDemo modify(int i) {
+        if (this.i == i) {
+            return this; // Return the same instance if the value is unchanged
+        } else {
+            return new ImmutableDemo(i); // Return a new instance with the new value
+        }
+    }
+
+    // Overriding toString() method to provide a string representation of the object
+    public String toString() {
+        return this.i + " ";
+    }
+
+    // Main method to demonstrate the behavior of the immutable class
+    public static void main(String[] args) {
+        ImmutableDemo id = new ImmutableDemo(100);
+        ImmutableDemo id1 = id.modify(200);
+
+        System.out.println(id); // Output: 100
+        System.out.println(id1); // Output: 200
+    }
+}
