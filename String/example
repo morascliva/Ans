@@ -1,0 +1,37 @@
+public class MyString implements java.io.Serializable, Comparable<String>, CharSequence {
+    
+    private String value;
+
+    public MyString(String value) {
+        this.value = value;
+    }
+
+    // Methods from CharSequence interface
+    @Override
+    public int length() {
+        return value.length();
+    }
+
+    @Override
+    public char charAt(int index) {
+        return value.charAt(index);
+    }
+
+    @Override
+    public CharSequence subSequence(int start, int end) {
+        return value.subSequence(start, end);
+    }
+
+    @Override
+    public String toString() {
+        return value;
+    }
+
+    // Method from Comparable interface
+    @Override
+    public int compareTo(String o) {
+        return value.compareTo(o);
+    }
+
+    // Additional methods and implementations can be added as needed
+}
