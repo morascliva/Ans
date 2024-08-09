@@ -1,0 +1,11 @@
+abstract class Keyword {
+    void pressQ() {
+        System.out.println("Press Q");
+    }
+
+    void pressP() {
+        System.out.println("Press P");
+    }
+
+    abstract void pressEnter();
+}
