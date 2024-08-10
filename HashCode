@@ -9,3 +9,11 @@ public class Emp{
         System.out.printf("%x",e2.hashCode());
     }
 }
+
+
+
+
+932583850
+Emp@123a439b
+305808283
+123a439b
