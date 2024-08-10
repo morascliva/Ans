@@ -1,0 +1,21 @@
+public class NullPointerExceptionExample {
+    public static void main(String[] args) {
+        String str = null; // str is not initialized and is null
+
+        try {
+            // Attempting to call a method on a null object reference
+            int length = str.length(); // This line will throw NullPointerException
+            System.out.println("Length of the string: " + length);
+        } catch (NullPointerException e) {
+            System.out.println("Caught a NullPointerException: " + e.getMessage());
+        }
+
+        // To avoid NullPointerException, you should check if the object is null
+        if (str != null) {
+            int length = str.length();
+            System.out.println("Length of the string: " + length);
+        } else {
+            System.out.println("String is null, cannot determine its length.");
+        }
+    }
+}
