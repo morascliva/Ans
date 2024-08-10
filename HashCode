@@ -1,0 +1,11 @@
+public class Emp{
+    public static void main(String []args){
+        Emp e1=new Emp();
+        System.out.println(e1.hashCode());
+        
+        Emp e2=new Emp();
+        System.out.println(e2);
+        System.out.println(e2.hashCode());
+        System.out.printf("%x",e2.hashCode());
+    }
+}
