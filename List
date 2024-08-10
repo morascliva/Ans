@@ -1,0 +1,31 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class ListDemo{
+    public static void main(String[] args){
+        List<String>lst=new ArrayList<>();
+        lst.add("Sudeep");
+        lst.add("Yash");
+        lst.add("Prakash");
+        
+        System.out.println("Iterating using for each lopp");
+        for(String v:lst){
+            System.out.println(v);
+        }
+        
+         System.out.println("Iterating using traditional for loop");
+        for(int i=0;i<lst.size();i++){
+            System.out.println(lst.get(i));
+        }
+    }
+}
+
+
+Iterating using for each lopp
+Sudeep
+Yash
+Prakash
+Iterating using traditional for loop
+Sudeep
+Yash
+Prakash
