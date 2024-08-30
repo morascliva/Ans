@@ -1,3 +1,4 @@
+
 public interface Switch{
 void son();
 void soff();
