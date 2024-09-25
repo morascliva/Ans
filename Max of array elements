@@ -1,4 +1,3 @@
-
 class Maxofarray {
     public static int maxx(int [] arr){
         int max=0;
