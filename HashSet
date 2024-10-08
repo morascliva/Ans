@@ -1,0 +1,32 @@
+import java.util.HashSet;
+
+public class hashSet {
+    public static void main(String[] args) {
+        // Creating a HashSet
+        HashSet<String> fruits = new HashSet<>();
+
+        // Adding elements to the HashSet
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Apple");  // Duplicate, will not be added
+
+        // Displaying the HashSet
+        System.out.println("HashSet: " + fruits);
+
+        // Checking if an element exists
+       
+            System.out.println(fruits.contains("Banana"));
+        
+
+        // Removing an element
+        fruits.remove("Orange");
+        System.out.println(fruits);
+
+        // Iterating over the HashSet
+        System.out.println("Iterating over the HashSet:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
