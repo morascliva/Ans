@@ -1,0 +1,31 @@
+
+public class Richest_Customer_wealth {
+	  public static void main(String[] args) {
+	        int[][] accounts = {
+	            {1, 2, 3},    // Wealth = 1 + 2 + 3 = 6
+	            {3, 2, 1},    // Wealth = 3 + 2 + 1 = 6
+	            {5, 1, 1}     // Wealth = 5 + 1 + 1 = 7
+	        };
+
+	        System.out.println("Richest customer's wealth: " + maximumWealth(accounts));
+	  }
+	public  static int maximumWealth(int[][] arr) {
+		int ans=Integer.MIN_VALUE;
+		
+		for(int row=0;row<arr.length;row++)
+		{
+	        int sum=0;
+	        
+	        for(int col=0;col<arr.length;col++) {
+	        	sum+=arr[row][col];
+	        }
+	        
+	        if(sum>ans) {
+	        	ans=sum;
+	        }
+		}
+		return ans;
+		
+	
+}
+}
