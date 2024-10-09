@@ -1,0 +1,39 @@
+Armstrong number is a number that is equal to the sum of cubes of its digits. For example 0, 1, 153, 370, 371 and 407 are the Armstrong numbers.
+
+Let's try to understand why 153 is an Armstrong number.
+
+153 = (1*1*1)+(5*5*5)+(3*3*3)  
+where:  
+(1*1*1)=1  
+(5*5*5)=125  
+(3*3*3)=27  
+So:  
+1+125+27=153  
+
+import java.util.Scanner;
+
+public class armstrong {
+public static void main(String args[]) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter n");
+	int n =sc.nextInt();
+	System.out.println(isArm( n ));
+}
+
+static boolean isArm(int n ) {
+	
+	int orignal =n;
+	int sum =0;
+	
+	
+	while(n>0) {
+		int a=n%10;
+		n=n/10;
+		sum =sum +a*a*a;
+	}
+	if(sum ==orignal) {
+		return true;
+	}
+	return false;
+}
+}
