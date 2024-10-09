@@ -1,0 +1,26 @@
+
+public class max2D_array {
+	public static void main(String[] args) {
+		int[][]arr= {
+				{2,5,67,1},
+				{45,6,2,34},
+				{9,6,43,2}
+		};
+	
+	int max=search(arr);
+	System.out.println(max);
+	}
+
+	static int search(int [][]arr) {
+		int max=arr[0][0];
+		for(int row=0;row<arr.length;row++) {
+			for(int col=0;col<arr[row].length;col++) {
+				if(arr[row][col]>max) {
+					max=arr[row][col];
+				}
+			}
+			
+		}
+		return max;
+	}
+}
