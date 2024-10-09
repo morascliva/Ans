@@ -1,0 +1,20 @@
+public class MinLinearSearch {
+public static void main(String []args) {
+	int[] arr= {10,50,89,34,17,-18,-1};
+     
+	System.out.println(lmin(arr));
+	
+}
+
+
+static int lmin(int [] arr) {
+	int ans= arr[0];
+	for(int i=1;i<arr.length;i++) {
+		if(arr[i]<ans) {
+			ans=arr[i];
+		}
+		
+	}
+	return ans;
+}
+}
