@@ -1,0 +1,26 @@
+
+public class LinearSearch_foreachloop {
+	
+		public static void main(String args[]) {
+			int [] arr= {1,9,2,8,3,7,4,6};
+			int target =7;
+			int ans=Lsearch(arr,target);
+			System.out.println(ans);
+		}
+
+		static int Lsearch(int []arr,int target) {
+			if(arr.length==0)
+			{
+				return -1;
+			}
+			
+			for(int element:arr) {
+				if(element==target) {
+					return element;
+				}
+				
+			}
+			return -1;
+
+}
+}
