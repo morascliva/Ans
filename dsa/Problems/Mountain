@@ -1,0 +1,29 @@
+-public class Mountain {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 7, 9, 10, 8, 6, 2};
+
+        // Print the index of the peak element
+        System.out.println("Peak element index: " + peak(arr));
+    }
+
+    static int peak(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] > arr[mid + 1]) {
+                // You are in the decreasing part of the array
+                // This may be the peak, but check the left side
+                end = mid;  // This is a potential peak
+            } else {
+                // You are in the increasing part of the array
+                start = mid + 1;  // Move to the right part
+            }
+        }
+
+        // At the end, start == end, pointing to the peak element
+        return start;  // or return end, since start == end at this point
+    }
+}
