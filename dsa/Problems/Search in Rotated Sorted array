@@ -1,0 +1,84 @@
+public class Search_in_Rotated_Sorted_array {
+
+    public static void main(String[] args) {
+        int[] arr = {4, 5, 6, 7, 0, 1, 2};  // Rotated sorted array
+        int target = 3;  // Target value to find
+        int result = search(arr, target);
+        
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+    }
+
+    // Method to search the target in the rotated sorted array
+    static int search(int[] nums, int target) {
+        int pivot = findPivot(nums);  // Find the pivot
+
+        // If no pivot is found, the array is not rotated
+        if (pivot == -1) {
+            // Do a normal binary search
+            return binarySearch(nums, target, 0, nums.length - 1);
+        }
+
+        // If the pivot is the target element
+        if (nums[pivot] == target) {
+            return pivot;
+        }
+
+        // If target is in the left sorted part
+        if (target >= nums[0]) {
+            return binarySearch(nums, target, 0, pivot - 1);
+        }
+
+        // If target is in the right sorted part
+        return binarySearch(nums, target, pivot + 1, nums.length - 1);
+    }
+
+    // Standard binary search implementation
+    static int binarySearch(int[] arr, int target, int start, int end) {
+        while (start <= end) {
+            int mid = start + (end - start) / 2;  // Calculate mid-point
+
+            if (target < arr[mid]) {
+                end = mid - 1;
+            } else if (target > arr[mid]) {
+                start = mid + 1;
+            } else {
+                // Target found
+                return mid;
+            }
+        }
+        // Target not found
+        return -1;
+    }
+
+    // Method to find the pivot index where the array rotation occurs
+    static int findPivot(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            // Case 1: Mid is the pivot point
+            if (mid < end && arr[mid] > arr[mid + 1]) {
+                return mid;
+            }
+
+            // Case 2: Mid-1 is the pivot point
+            if (mid > start && arr[mid] < arr[mid - 1]) {
+                return mid - 1;
+            }
+
+            // Case 3: Decide which half to search next
+            if (arr[mid] <= arr[start]) {
+                end = mid - 1;  // Pivot is in the left half
+            } else {
+                start = mid + 1;  // Pivot is in the right half
+            }
+        }
+        return -1;  // No pivot found (the array is not rotated)
+    }
+}
