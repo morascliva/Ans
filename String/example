@@ -1,3 +1,4 @@
+
 public class MyString implements java.io.Serializable, Comparable<String>, CharSequence {
     
     private String value;
