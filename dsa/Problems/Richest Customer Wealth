@@ -11,7 +11,7 @@ public class Richest_Customer_wealth {
 	  }
 	public  static int maximumWealth(int[][] arr) {
 		int ans=Integer.MIN_VALUE;
-		
+		int sum=0;
 		for(int row=0;row<arr.length;row++)
 		{
 	        int sum=0;
@@ -25,6 +25,7 @@ public class Richest_Customer_wealth {
 	        }
 		}
 		return ans;
+	}
 		
 	
 }
