@@ -1,4 +1,3 @@
-
 interface switch{
   abstarct void son();
   abstarct void soff();
